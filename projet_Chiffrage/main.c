@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <chiffrage.c>
+
+string texte;
+string cle;
 
 int main()
 {
-    printf("Hello world!\n");
-    return 0;
+    printf("Quel est votre texte à chiffrer ?")
+
 }
 
 
