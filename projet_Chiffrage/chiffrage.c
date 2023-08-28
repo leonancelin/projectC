@@ -4,7 +4,7 @@
 
 int size_texte = 0;
 int size_cle = 0;
-
+/*
 char rallongement_perroquet(char texte[], char cle[])
 {
 
@@ -40,4 +40,4 @@ char chiffrage(char texte[], char cle[], char texte_chiffre[])
     return cle;
     return texte_chiffre;
 
-}
+}*/

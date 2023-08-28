@@ -1,16 +1,19 @@
 # depslib dependency file v1.0
-1693230667 source:d:\github\projectc\projet_chiffrage\chiffrage.c
+1693233513 source:d:\github\projectc\projet_chiffrage\chiffrage.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1693230748 source:d:\github\projectc\projet_chiffrage\main.c
+1693237806 source:d:\github\projectc\projet_chiffrage\main.c
 	<stdio.h>
 	<stdlib.h>
-	"chiffrage.c"
+	<string.h>
+	"header.h"
 
 1693231511 d:\github\projectc\projet_chiffrage\chiffrage.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+
+1693237736 d:\github\projectc\projet_chiffrage\header.h
 
