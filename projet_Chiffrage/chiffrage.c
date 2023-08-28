@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int size_texte = 0;
 int size_cle = 0;
-char temp[];
 
-char[] rallongement_perroquet(char[] texte, char[] cle)
+char rallongement_perroquet(char texte[], char cle[])
 {
 
     size_texte = sizeof(texte);
@@ -18,22 +18,26 @@ char[] rallongement_perroquet(char[] texte, char[] cle)
         strcat(cle, temp_cle);
     }
 
+    return cle;
+
 }
 
 
 
-char[] chiffrage(char[] texte, char[] cle)
+char chiffrage(char texte[], char cle[], char texte_chiffre[])
 {
-    char temp[];
+
     size_texte = sizeof(texte);
     size_cle = sizeof(cle);
-    if
 
-    for (int i=0; i<size; i++)
+    for (int i=0; i<size_cle; i++)
     {
-        temp[i] = cle[i];
-
+        texte_chiffre[i] = texte[i] - cle[i];
 
     }
+
+    return texte;
+    return cle;
+    return texte_chiffre;
 
 }
