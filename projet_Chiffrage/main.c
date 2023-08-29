@@ -5,8 +5,7 @@
 #include <math.h>
 
 #include "header.h"
-
-
+#include "lecture_ecriture.h"
 
 char texte[200];
 char cle[200];
@@ -16,27 +15,30 @@ int taille_cle = 0;
 
 int main()
 {
-    //Saisie du texte à chiffrer
+    //Saisie du texte à chiffrer, comprend les espaces
     printf("Quel est votre texte a chiffrer ?\n");
-    scanf("%s", texte);
+    //scanf("%s", texte);
+    fgets(texte, sizeof(texte), stdin);
 
-    // Saisie de la clé
+    //Saisie de la clé (perroquet) par l'utilisateur
     printf("Quel perroquet voulez-vous utiliser\n");
     scanf("%s", cle);
 
-    //Debugging
+    //Debugging, longueur de la chaine de caractères ne fonctionne pas
     taille_texte = strlen(texte) +1 ;
     taille_cle = strlen(cle) +1 ;
     printf("\n\n longueur texte : %d \n" + taille_texte);
     printf("\n longueur cle : %d \n" + taille_cle);
 
-    // chiffrage du texte
+    //Chiffrage du texte
     chiffrage(texte, cle, texte_chiffre);
+    //lireFichier();
+    ecrireFichier();
 
-    // présentation des résultats
+    //Présentation des résultats
     printf("\ntexte originel : %s", texte);
-    printf("\ncle de chiffrement : %s", cle);
-    printf("\ntexte chiffre : %s", texte_chiffre);
+    printf("cle de chiffrement : %s", cle);
+    printf("\ntexte chiffre : %s\n\n", texte_chiffre);
 
 }
 

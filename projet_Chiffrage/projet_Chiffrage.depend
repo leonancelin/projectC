@@ -4,18 +4,39 @@
 	<stdlib.h>
 	<string.h>
 
-1693297433 source:d:\github\projectc\projet_chiffrage\main.c
+1693303695 source:d:\github\projectc\projet_chiffrage\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
 	<math.h>
 	"header.h"
+	"lecture_ecriture.h"
 
 1693231511 d:\github\projectc\projet_chiffrage\chiffrage.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1693298294 d:\github\projectc\projet_chiffrage\header.h
+1693303699 d:\github\projectc\projet_chiffrage\header.h
+
+1693303016 d:\github\projectc\projet_chiffrage\ecriture.c
+	<stdio.h>
+	<stdlib.h>
+
+1693302873 d:\github\projectc\projet_chiffrage\lecture.c
+	<stdio.h>
+	<stdlib.h>
+
+1693303255 source:d:\github\projectc\projet_chiffrage\lecture.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1693303232 source:d:\github\projectc\projet_chiffrage\ecriture.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1693303737 d:\github\projectc\projet_chiffrage\lecture_ecriture.h
 

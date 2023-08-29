@@ -1,35 +1,7 @@
 #ifndef HEADER_H_INCLUDED
 #define HEADER_H_INCLUDED
 
-/*
-char rallongement_perroquet(char texte[], char cle[])
-{
-    int size_texte = strlen(texte);
-    int size_cle = strlen(cle);
-    bool taille = false;
-
-    if(size_cle%size_texte < 1)
-        taille = true;
-
-    while(taille)
-    {
-        char temp_cle[size_cle];
-        strcpy(temp_cle, cle);
-        strcat(cle, temp_cle);
-        if(size_cle%size_texte < 1)
-            taille = true;
-
-        else
-            taille = false;
-
-    }
-
-    return texte;
-    return cle;
-
-} */
-
-
+////////Entête définissant le chiffrage des textes
 
 char chiffrage(char texte[], char cle[], char texte_chiffre[])
 {
@@ -37,63 +9,42 @@ char chiffrage(char texte[], char cle[], char texte_chiffre[])
     int size_cle = strlen(cle) ;
     int n, j = 0;
 
-
-
-
     int ascii_texte[size_texte];
     int ascii_cle[size_cle];
     int ascii_chiffrage[size_texte];
 
-    //conversion des chaines de caractères du texte en ASCII
+    //Conversion des chaines de caractères du texte en ASCII
     for(int i= 0; i<size_texte; i++)
     {
         ascii_texte[i] = (int) texte[i];
 
     }
 
-    //conversion des chaines de caractères de la clé en ASCII
+    //Conversion des chaines de caractères de la clé en ASCII
     for(int i= 0; i<size_cle; i++)
     {
         ascii_cle[i] = (int) cle[i];
 
     }
 
-
-    //Soustraction du texte par la clé
-    /*
-    for (int i=0; i<size_texte; i++)
-    {
-        ascii_chiffrage[i] = ascii_texte[i] - ascii_cle[i-n*size_cle];
-        if(i == size_cle)
-        {
-            n += 1;
-            return n;
-        }
-
-    }*/
-
+    //Chiffrage de la chaine de caractères donnée par l'utilisateur
     while(j < size_texte)
     {
         if(j == size_cle)
             n += 1;
 
-        //on commence à partir de 32 pour éviter d'afficher de la mise en page (retour à la ligne, etc...)
+        //On commence à partir de 32 pour éviter d'afficher de la mise en page (retour à la ligne, etc...)
         ascii_chiffrage[j] = 32 + abs(ascii_texte[j] - ascii_cle[j-n*size_cle]);
         j++;
     }
 
-
+    //Conversion des valeurs ASCII en caractères
     for(int i= 0; i<size_texte; i++)
         texte_chiffre[i] = (char) ascii_chiffrage[i];
-
 
     return texte;
     return cle;
     return texte_chiffre;
-
-
 }
-
-
 
 #endif // HEADER_H_INCLUDED
