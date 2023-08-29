@@ -1,7 +1,7 @@
 #ifndef HEADER_H_INCLUDED
 #define HEADER_H_INCLUDED
 
-
+/*
 char rallongement_perroquet(char texte[], char cle[])
 {
     int size_texte = strlen(texte);
@@ -27,7 +27,7 @@ char rallongement_perroquet(char texte[], char cle[])
     return texte;
     return cle;
 
-}
+} */
 
 
 
@@ -35,21 +35,22 @@ char chiffrage(char texte[], char cle[], char texte_chiffre[])
 {
     int size_texte = strlen(texte);
     int size_cle = strlen(cle);
-    int iteration = 0;
+    int n = 1;
 
-    //convert string to ASCII values
+
 
     int ascii_texte[size_texte];
     int ascii_cle[size_cle];
     int ascii_chiffrage[size_texte];
 
+    //conversion des chaines de caractères du texte en ASCII
     for(int i= 0; i<size_texte; i++)
     {
         ascii_texte[i] = (int) texte[i];
 
     }
 
-
+    //conversion des chaines de caractères de la clé en ASCII
     for(int i= 0; i<size_cle; i++)
     {
         ascii_cle[i] = (int) cle[i];
@@ -57,15 +58,14 @@ char chiffrage(char texte[], char cle[], char texte_chiffre[])
     }
 
 
-
+    //Soustraction du texte par la clé
     for (int i=0; i<size_texte; i++)
     {
-        ascii_chiffrage[i] = ascii_texte[i] - ascii_cle[i];
-        if(ascii_cle[i] == "\0")
+        ascii_chiffrage[i] = ascii_texte[i] - ascii_cle[i-n*size_cle];
+        if(ascii_cle[i] == '\0')
         {
             n += 1;
-            ascii_chiffrage[i] = ascii_texte[i] - ascii_cle[i-n*size_cle];
-
+            //return n;
         }
 
     }
