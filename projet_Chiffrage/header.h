@@ -33,9 +33,10 @@ char rallongement_perroquet(char texte[], char cle[])
 
 char chiffrage(char texte[], char cle[], char texte_chiffre[])
 {
-    int size_texte = strlen(texte);
-    int size_cle = strlen(cle);
-    int n = 1;
+    int size_texte = strlen(texte) + 1;
+    int size_cle = strlen(cle) ;
+    int n, j = 0;
+
 
 
 
@@ -59,16 +60,28 @@ char chiffrage(char texte[], char cle[], char texte_chiffre[])
 
 
     //Soustraction du texte par la clé
+    /*
     for (int i=0; i<size_texte; i++)
     {
         ascii_chiffrage[i] = ascii_texte[i] - ascii_cle[i-n*size_cle];
-        if(ascii_cle[i] == '\0')
+        if(i == size_cle)
         {
             n += 1;
-            //return n;
+            return n;
         }
 
+    }*/
+
+    while(j < size_texte)
+    {
+        if(j == size_cle)
+            n += 1;
+
+        //on commence à partir de 32 pour éviter d'afficher de la mise en page (retour à la ligne, etc...)
+        ascii_chiffrage[j] = 32 + abs(ascii_texte[j] - ascii_cle[j-n*size_cle]);
+        j++;
     }
+
 
     for(int i= 0; i<size_texte; i++)
         texte_chiffre[i] = (char) ascii_chiffrage[i];

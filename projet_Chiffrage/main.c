@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <math.h>
+
 #include "header.h"
+
 
 
 char texte[200];
@@ -15,24 +18,23 @@ int main()
 {
     //Saisie du texte à chiffrer
     printf("Quel est votre texte a chiffrer ?\n");
-    scanf("%200s", texte);
+    scanf("%s", texte);
 
     // Saisie de la clé
     printf("Quel perroquet voulez-vous utiliser\n");
-    scanf("%200s", cle);
-
-    taille_texte = strlen(texte);
-    taille_cle = strlen(cle);
+    scanf("%s", cle);
 
     //Debugging
-    printf("\n\n longueur texte : %d\n" + taille_texte);
-    printf("\n longueur cle : %d\n" + taille_cle);
+    taille_texte = strlen(texte) +1 ;
+    taille_cle = strlen(cle) +1 ;
+    printf("\n\n longueur texte : %d \n" + taille_texte);
+    printf("\n longueur cle : %d \n" + taille_cle);
 
-    /*rallongement_perroquet(texte, cle);*/
+    // chiffrage du texte
     chiffrage(texte, cle, texte_chiffre);
 
     // présentation des résultats
-    printf("\ntexte_originel : %s", texte);
+    printf("\ntexte originel : %s", texte);
     printf("\ncle de chiffrement : %s", cle);
     printf("\ntexte chiffre : %s", texte_chiffre);
 

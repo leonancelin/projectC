@@ -4,11 +4,12 @@
 	<stdlib.h>
 	<string.h>
 
-1693294504 source:d:\github\projectc\projet_chiffrage\main.c
+1693297433 source:d:\github\projectc\projet_chiffrage\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdbool.h>
+	<math.h>
 	"header.h"
 
 1693231511 d:\github\projectc\projet_chiffrage\chiffrage.c
@@ -16,5 +17,5 @@
 	<stdlib.h>
 	<string.h>
 
-1693294983 d:\github\projectc\projet_chiffrage\header.h
+1693298294 d:\github\projectc\projet_chiffrage\header.h
 
