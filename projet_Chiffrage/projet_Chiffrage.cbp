@@ -31,10 +31,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="dest.crt.txt" />
 		<Unit filename="header.h" />
+		<Unit filename="lecture_ecriture.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="perroquet.txt" />
 		<Unit filename="source.txt" />
 		<Extensions />
 	</Project>

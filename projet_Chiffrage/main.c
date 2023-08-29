@@ -49,6 +49,9 @@ int main()
 
         writeFileEncrypted(texte_chiffre);
 
+        //suppression du fichier source
+        remove("source.txt");
+
         //Présentation des résultats
         printf("\ntexte originel : %s", texte);
         printf("\ncle de chiffrement : %s", cle);
@@ -81,13 +84,13 @@ int main()
 
 
             //Debugging, longueur de la chaine de caractères ne fonctionne pas
-            taille_texte = strlen(texte) +1 ;
-            taille_cle = strlen(cle) +1 ;
+            taille_texte = strlen(texte);
+            taille_cle = strlen(cle);
 
             //taille_texte = (int) taille_texte;
             //taille_cle = (int) taille_cle;
-            printf("\n\n longueur texte : %d \n" + taille_texte);
-            printf("\n longueur cle : %d \n" + taille_cle);
+            printf("\n\n longueur texte : %d \n", taille_texte);
+            printf("\n longueur cle : %d \n", taille_cle);
 
             //Chiffrage du texte
             chiffrage(texte, cle, texte_chiffre);
@@ -115,8 +118,6 @@ int main()
 
         //Présentation des résultats
         printf("\ntexte originel : %s", texte);
-        printf("\ncle de chiffrement : %s", cle);
-        printf("\ntexte chiffre : %s\n\n", texte_chiffre);
 
         return 0;
         break;

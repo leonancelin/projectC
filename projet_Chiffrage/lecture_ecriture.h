@@ -15,7 +15,7 @@ void writeFileEncrypted(char texte_chiffre[])
         return EXIT_FAILURE;
     }
 
-    for(int i = 0; i != '\0'; i++)
+    for(int i = 0; i<=strlen(texte_chiffre); i++)
     {
        fputc(texte_chiffre[i], fp);
     }
@@ -42,7 +42,7 @@ void writeFileKey(char cle[])
         return EXIT_FAILURE;
     }
 
-    for(int i = 0; i != '\0'; i++)
+    for(int i = 0; i<=strlen(cle); i++)
     {
        fputc(cle[i], fp);
     }
@@ -125,18 +125,10 @@ char readFile(char texte[], int choix)
         printf("file can't be opened \n");
     }
 
-    printf("content of this file are \n");
+    printf("content of this file are : ");
+    fgets(texte, 1000, ptr);
+    printf("%s\n", texte);
 
-    // Printing what is written in file
-    // character by character using loop.
-    do {
-        //texte = fgetc(ptr); //texte, sizeof(texte), stdin
-        fgets(texte, 1000, ptr);
-        printf("%s", texte);
-
-        // Checking if character is not EOF.
-        // If it is EOF stop reading.
-    } while (texte != EOF);
 
     // Closing the file
     fclose(ptr);
